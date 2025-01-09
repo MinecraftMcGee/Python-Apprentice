@@ -1,13 +1,20 @@
+
+
 import turtle
+from turtle import *
+
 
 if __name__ == '__main__':
     # Click in the righthand window to make it active then use your arrow
+# keys to control the spaceship!
   game = True
   screen = turtle.Screen()
 # this assures that the size of the screen will always be 400x400 ...
-
+  angle = 0
   screen.setup(400, 400)
 # ... which is the same size as our image
+# now set the background to our space image
+ 
   screen.bgcolor("white")
   t = turtle.Turtle()
 # Or, set the shape of a turtle
@@ -15,11 +22,11 @@ if __name__ == '__main__':
  #   turtle.shape("turtle.png")
   turtle.penup()
   t.penup()
-  turtle.home()
   turtle.setx(-100)
   t.setx(100)
   t.sety(0)
   turtle.sety(0)
+  
   while(game):
     turtle.penup()
 
@@ -69,9 +76,36 @@ if __name__ == '__main__':
     def left():
         t.left(turn_speed)
 
+
     def right():
         t.right(turn_speed)
+        #angle = angle - turn_speed
+        #t.tilt(turn_speed)
+        #print(t.tiltangle())
 
+        #print(angle)
+
+    def spacebar():
+      print("works")
+      angle = -turtle.heading()
+      print(angle)
+      b = turtle.Turtle()
+      b.hideturtle()
+      b.penup()
+      b.setposition(turtle.xcor(),turtle.ycor())
+      b.pendown()
+      b.right(angle)
+      for i in range(50):
+        b.forward(1)
+        if ((b.xcor()-8)< t.xcor() and t.xcor()<(b.xcor()+8)):
+          if ((b.ycor()-8)< t.ycor() and t.ycor()<(b.ycor()+8)):
+            print("game over player 2")
+            b.hideturtle()
+            t.hideturtle()
+            game=False
+
+      b.hideturtle()
+      b.clear()
     t.penup()
     t.speed(0)
 #t.home()
@@ -81,6 +115,7 @@ if __name__ == '__main__':
     screen.onkey(backward, "Down")
     screen.onkey(left, "Left")
     screen.onkey(right, "Right")
+    screen.onkey(spacebar, "space")
     screen.listen()
    
     if ((turtle.xcor()-8)< t.xcor() and t.xcor()<(turtle.xcor()+8)):
@@ -89,3 +124,10 @@ if __name__ == '__main__':
         t.hideturtle()
         turtle.hideturtle()
         game=False
+
+
+
+
+
+
+    pass

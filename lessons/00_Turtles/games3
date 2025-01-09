@@ -48,10 +48,10 @@ if __name__ == '__main__':
     turtle.speed(0)
 
 # now associate the defs from above with certain keyboard events
-    screen.onkey(forward, "up")
-    screen.onkey(backward, "down")
-    screen.onkey(left, "left")
-    screen.onkey(right, "right")
+    screen.onkey(forward, "w")
+    screen.onkey(backward, "s")
+    screen.onkey(left, "a")
+    screen.onkey(right, "d")
     screen.onkey(penup, "u")
-    screen.onkey(pendown, "d")
+    screen.onkey(pendown, "i")
     screen.listen()
