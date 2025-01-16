@@ -1,11 +1,36 @@
+tina = turtle.Turtle()
+tina.shape('triangle')
+tina.speed(0)
 
-"""
-Turtles with a loop. 
 
-Study the previous program, 05a_Loop_with_Turtle.py, and then
-write a new program that uses a loop to draw a pentagon.
-( You can cut and past most of it! )
+tina.pendown()
 
-"""
+for i in range(4):
+    tina.forward(100)
+    tina.left(90)
 
-... # Your code here
+tina.right(135)
+
+for i in range(4):
+    tina.forward(100)
+    tina.left(90)
+
+tina.right(35)
+
+for i in range(4):
+    tina.forward(100)
+    tina.right(90)
+
+
+
+
+
+
+
+
+
+
+
+
+
+turtle.exitonclick()
