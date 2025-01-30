@@ -30,8 +30,8 @@ if __name__ == '__main__':
   while(game):
     turtle.penup()
 
-    move_speed = 1
-    turn_speed = 5
+    move_speed = 5
+    turn_speed = 25
 
 
 # these defs control the movement of our "turtle"
@@ -63,8 +63,8 @@ if __name__ == '__main__':
   #  screen.addshape("rocket.png")
   #  t.shape("rocket.png")
 
-    move_speed = 1
-    turn_speed = 5
+    move_speed = 5
+    turn_speed = 10
 
 # these defs control the movement of our "t"
     def forward():
@@ -127,7 +127,4 @@ if __name__ == '__main__':
 
 
 
-
-
-
-    pass
+# exitonclick
