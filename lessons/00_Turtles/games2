@@ -87,5 +87,5 @@ if __name__ == '__main__':
       if ((turtle.ycor()-8)< t.ycor() and t.ycor()<(turtle.ycor()+8)):
         print("game over player 1")
         t.hideturtle()
-        turtle.hideturtle()
-        game=False
+turtle.hideturtle()
+game=False  
